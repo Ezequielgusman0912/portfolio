@@ -8,7 +8,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY", "dev-only-change-me")
 DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
 
-allowed_hosts = os.environ.get("ALLOWED_HOSTS", "localhost,127.0.0.1")
+allowed_hosts = os.environ.get(
+    "ALLOWED_HOSTS",
+    "localhost,127.0.0.1,.railway.app,.up.railway.app",
+)
 ALLOWED_HOSTS = [host.strip() for host in allowed_hosts.split(",") if host.strip()]
 
 csrf_origins = os.environ.get("CSRF_TRUSTED_ORIGINS", "")
