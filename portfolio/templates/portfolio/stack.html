@@ -9,6 +9,20 @@
     <p class="lead">Herramientas que uso para construir, mantener y observar sistemas backend.</p>
   </section>
 
+  <section class="section tech-strip stack-icons" aria-label="Tecnologias destacadas">
+    {% for tech in tech_badges %}
+      <article class="tech-card">
+        <svg class="tech-icon {{ tech.icon }}" aria-hidden="true">
+          <use href="#icon-{{ tech.icon }}"></use>
+        </svg>
+        <div>
+          <h2>{{ tech.name }}</h2>
+          <p>{{ tech.label }}</p>
+        </div>
+      </article>
+    {% endfor %}
+  </section>
+
   <section class="section stack-section">
     <div class="skill-grid">
       {% for group, items in skills.items %}

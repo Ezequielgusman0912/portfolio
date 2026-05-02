@@ -10,9 +10,18 @@
       <p class="lead">Disponible para conversar sobre backend, integraciones, automatizacion, soporte funcional y soluciones cloud.</p>
     </div>
     <div class="contact-actions">
-      <a href="mailto:{{ profile.email }}">{{ profile.email }}</a>
-      <a href="tel:{{ profile.phone }}">{{ profile.phone }}</a>
-      <a href="{{ profile.linkedin }}" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a href="mailto:{{ profile.email }}">
+        <svg aria-hidden="true"><use href="#icon-mail"></use></svg>
+        {{ profile.email }}
+      </a>
+      <a href="tel:{{ profile.phone }}">
+        <svg aria-hidden="true"><use href="#icon-phone"></use></svg>
+        {{ profile.phone }}
+      </a>
+      <a href="{{ profile.linkedin }}" target="_blank" rel="noreferrer">
+        <svg aria-hidden="true"><use href="#icon-linkedin"></use></svg>
+        LinkedIn
+      </a>
     </div>
   </section>
 {% endblock %}

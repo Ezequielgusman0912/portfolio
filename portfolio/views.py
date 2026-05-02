@@ -23,6 +23,24 @@ HIGHLIGHTS = [
     "Grafana, Jira, Confluence, Scrum y Azure DevOps",
 ]
 
+TECH_BADGES = [
+    {
+        "name": "Python",
+        "label": "Backend scripting",
+        "icon": "python",
+    },
+    {
+        "name": "Django",
+        "label": "Web apps y APIs",
+        "icon": "django",
+    },
+    {
+        "name": "MySQL",
+        "label": "Datos relacionales",
+        "icon": "mysql",
+    },
+]
+
 EXPERIENCES = [
     {
         "company": "Porta Hnos. S.A.",
@@ -141,6 +159,7 @@ def base_context(active):
 def home(request):
     context = base_context("home") | {
         "highlights": HIGHLIGHTS,
+        "tech_badges": TECH_BADGES,
     }
     return render(request, "portfolio/home.html", context)
 
@@ -162,6 +181,7 @@ def projects(request):
 def stack(request):
     context = base_context("stack") | {
         "skills": SKILLS,
+        "tech_badges": TECH_BADGES,
         "education": EDUCATION,
         "certifications": CERTIFICATIONS,
     }
