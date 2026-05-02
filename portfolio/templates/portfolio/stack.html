@@ -1,0 +1,47 @@
+{% extends "portfolio/base.html" %}
+
+{% block title %}Stack | {{ profile.name }}{% endblock %}
+
+{% block content %}
+  <section class="section page-heading">
+    <p class="eyebrow">Stack</p>
+    <h1>Tecnologias y forma de trabajo</h1>
+    <p class="lead">Herramientas que uso para construir, mantener y observar sistemas backend.</p>
+  </section>
+
+  <section class="section stack-section">
+    <div class="skill-grid">
+      {% for group, items in skills.items %}
+        <article>
+          <h2>{{ group }}</h2>
+          <div class="skill-list">
+            {% for item in items %}
+              <span>{{ item }}</span>
+            {% endfor %}
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="section compact-grid">
+    <article>
+      <p class="eyebrow">Educacion</p>
+      <h2>Formacion</h2>
+      <ul class="plain-list">
+        {% for item in education %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </article>
+    <article>
+      <p class="eyebrow">Certificaciones</p>
+      <h2>Aprendizaje continuo</h2>
+      <ul class="plain-list">
+        {% for item in certifications %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </article>
+  </section>
+{% endblock %}

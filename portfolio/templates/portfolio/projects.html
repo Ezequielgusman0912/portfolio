@@ -1,0 +1,27 @@
+{% extends "portfolio/base.html" %}
+
+{% block title %}Proyectos | {{ profile.name }}{% endblock %}
+
+{% block content %}
+  <section class="section page-heading">
+    <p class="eyebrow">Casos destacados</p>
+    <h1>Proyectos y focos tecnicos</h1>
+    <p class="lead">Una muestra de areas donde combino backend, integraciones, cloud y observabilidad.</p>
+  </section>
+
+  <section class="section">
+    <div class="project-grid">
+      {% for project in projects %}
+        <article class="project-card">
+          <h2>{{ project.name }}</h2>
+          <p>{{ project.description }}</p>
+          <div class="tags">
+            {% for tag in project.tags %}
+              <span>{{ tag }}</span>
+            {% endfor %}
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}

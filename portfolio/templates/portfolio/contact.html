@@ -1,0 +1,18 @@
+{% extends "portfolio/base.html" %}
+
+{% block title %}Contacto | {{ profile.name }}{% endblock %}
+
+{% block content %}
+  <section class="contact section page-contact">
+    <div>
+      <p class="eyebrow">Contacto</p>
+      <h1>Construyamos algo util.</h1>
+      <p class="lead">Disponible para conversar sobre backend, integraciones, automatizacion, soporte funcional y soluciones cloud.</p>
+    </div>
+    <div class="contact-actions">
+      <a href="mailto:{{ profile.email }}">{{ profile.email }}</a>
+      <a href="tel:{{ profile.phone }}">{{ profile.phone }}</a>
+      <a href="{{ profile.linkedin }}" target="_blank" rel="noreferrer">LinkedIn</a>
+    </div>
+  </section>
+{% endblock %}
