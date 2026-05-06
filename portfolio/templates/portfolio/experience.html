@@ -6,41 +6,19 @@
   <section class="section page-heading">
     <p class="eyebrow">Trayectoria</p>
     <h1>Experiencia profesional</h1>
-    <p class="lead">Resumen de roles por empresa y puesto. Cada tarjeta abre el detalle completo de responsabilidades, tecnologias y aportes.</p>
+    <p class="lead">Vista general por empresa. Cada tarjeta abre una pagina con los puestos, responsabilidades y tecnologias trabajadas.</p>
   </section>
 
-  <section class="section experience-overview" aria-label="Resumen de experiencia">
-    {% for experience in experiences %}
-      <a class="experience-card" href="#{{ experience.id }}">
-        <span class="company-badge">{{ experience.badge }}</span>
-        <span class="experience-card-body">
-          <span class="experience-role">{{ experience.role }}</span>
-          <span class="experience-company">{{ experience.company }}</span>
-          <span class="experience-meta">{{ experience.from_to }} / {{ experience.mode }}</span>
-          <span class="experience-location">{{ experience.location }}</span>
-          <span class="experience-summary">{{ experience.summary }}</span>
-          <span class="experience-link">Ver detalle</span>
-        </span>
-      </a>
+  <section class="section company-overview" aria-label="Empresas">
+    {% for company in companies %}
+      <article class="company-card">
+        <div>
+          <h2>{{ company.name }}</h2>
+          <p class="company-dates">{{ company.dates }}</p>
+        </div>
+        <p>{{ company.summary }}</p>
+        <a class="company-link" href="{% url 'portfolio:experience_detail' company.slug %}">Ver mas</a>
+      </article>
     {% endfor %}
-  </section>
-
-  <section class="section timeline-page">
-    <div class="timeline">
-      {% for experience in experiences %}
-        <article class="timeline-item" id="{{ experience.id }}">
-          <div>
-            <h2>{{ experience.role }}</h2>
-            <p class="meta">{{ experience.company }} / {{ experience.period }}</p>
-            <p>{{ experience.description }}</p>
-            <ul>
-              {% for item in experience.items %}
-                <li>{{ item }}</li>
-              {% endfor %}
-            </ul>
-          </div>
-        </article>
-      {% endfor %}
-    </div>
   </section>
 {% endblock %}

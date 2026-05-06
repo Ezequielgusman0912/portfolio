@@ -1,0 +1,30 @@
+{% extends "portfolio/base.html" %}
+
+{% block title %}{{ company.name }} | Experiencia{% endblock %}
+
+{% block content %}
+  <section class="section page-heading">
+    <p class="eyebrow">Trayectoria</p>
+    <h1>{{ company.name }}</h1>
+    <p class="lead">{{ company.summary }}</p>
+  </section>
+
+  <section class="section timeline-page">
+    <div class="timeline">
+      {% for experience in experiences %}
+        <article class="timeline-item" id="{{ experience.id }}">
+          <div>
+            <h2>{{ experience.role }}</h2>
+            <p class="meta">{{ experience.period }}</p>
+            <p>{{ experience.description }}</p>
+            <ul>
+              {% for item in experience.items %}
+                <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}

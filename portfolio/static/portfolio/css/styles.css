@@ -113,6 +113,7 @@ nav a.active::after {
 .section,
 .hero-panel,
 .tech-card,
+.company-card,
 .experience-card,
 .timeline-item,
 .project-card,
@@ -359,6 +360,61 @@ h3 {
 .timeline {
   display: grid;
   gap: 24px;
+}
+
+.company-overview {
+  display: grid;
+  gap: 26px;
+  max-width: 880px;
+  padding-top: 24px;
+}
+
+.company-card {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.42fr) minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 28px;
+  min-height: 172px;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(17, 31, 36, 0.92), rgba(8, 20, 18, 0.92));
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.03) inset;
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.company-card:hover {
+  border-color: rgba(32, 224, 194, 0.56);
+  box-shadow: var(--soft-shadow);
+  transform: translateY(-4px);
+}
+
+.company-card:nth-child(2) {
+  animation-delay: 120ms;
+}
+
+.company-card h2 {
+  margin-bottom: 8px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1;
+}
+
+.company-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.company-dates {
+  color: #9ff7ea;
+  font-weight: 800;
+}
+
+.company-link {
+  align-self: end;
+  color: var(--accent);
+  font-size: 0.95rem;
+  font-weight: 800;
+  white-space: nowrap;
 }
 
 .experience-overview {
@@ -613,6 +669,7 @@ ul {
   .split,
   .contact,
   .tech-strip,
+  .company-card,
   .experience-overview,
   .project-grid,
   .skill-grid,
@@ -641,6 +698,7 @@ ul {
   }
 
   .tech-card,
+  .company-card,
   .experience-card,
   .timeline-item,
   .project-card,
@@ -690,6 +748,16 @@ ul {
   .experience-card {
     grid-template-columns: 1fr;
     min-height: auto;
+  }
+
+  .company-card {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    gap: 18px;
+  }
+
+  .company-link {
+    justify-self: start;
   }
 
   .company-badge {

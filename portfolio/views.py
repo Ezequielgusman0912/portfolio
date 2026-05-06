@@ -1,3 +1,4 @@
+from django.http import Http404
 from django.shortcuts import render
 
 
@@ -141,6 +142,29 @@ EXPERIENCES = [
     },
 ]
 
+COMPANIES = [
+    {
+        "slug": "porta-hnos",
+        "name": "Porta Hnos. S.A.",
+        "dates": "Abr. 2024 - Actualidad",
+        "summary": (
+            "Crecimiento dentro del area de sistemas: soporte IT, analisis funcional "
+            "del ERP corporativo y desarrollo backend con Python, Django, Azure, "
+            "Grafana y Azure DevOps."
+        ),
+    },
+    {
+        "slug": "orange",
+        "name": "Orange",
+        "dates": "Mar. 2021 - May. 2022",
+        "summary": (
+            "Analisis, normalizacion y control de calidad de datos tecnicos de "
+            "infraestructura electrica y telefonica, trabajando con planillas "
+            "avanzadas y estructuras de datos heterogeneas."
+        ),
+    },
+]
+
 SKILLS = {
     "Lenguajes": ["Python", "JavaScript", "HTML/CSS", "SQL", "Ruby"],
     "Backend": ["Django", "Django REST Framework", "Microservicios", "WebSockets", "APIs"],
@@ -207,9 +231,26 @@ def home(request):
 
 def experience(request):
     context = base_context("experience") | {
-        "experiences": EXPERIENCES,
+        "companies": COMPANIES,
     }
     return render(request, "portfolio/experience.html", context)
+
+
+def experience_detail(request, slug):
+    company = next((item for item in COMPANIES if item["slug"] == slug), None)
+    if company is None:
+        raise Http404("Empresa no encontrada")
+
+    company_experiences = [
+        experience
+        for experience in EXPERIENCES
+        if experience["company"] == company["name"]
+    ]
+    context = base_context("experience") | {
+        "company": company,
+        "experiences": company_experiences,
+    }
+    return render(request, "portfolio/experience_detail.html", context)
 
 
 def projects(request):
