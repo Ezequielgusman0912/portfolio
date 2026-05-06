@@ -43,8 +43,14 @@ TECH_BADGES = [
 
 EXPERIENCES = [
     {
+        "id": "backend-porta",
+        "badge": "PH",
         "company": "Porta Hnos. S.A.",
         "role": "Desarrollador Backend",
+        "from_to": "Jul. 2025 - Actualidad",
+        "mode": "Jornada completa / Hibrido",
+        "location": "Cordoba, Argentina",
+        "summary": "Arquitectura backend, microservicios, Azure, integraciones y datos en tiempo real.",
         "period": "Julio 2025 - Actualidad / Jornada completa / Hibrido",
         "description": (
             "Participo en el diseno y escalabilidad de arquitectura server-side, "
@@ -63,8 +69,14 @@ EXPERIENCES = [
         ],
     },
     {
+        "id": "analista-porta",
+        "badge": "PH",
         "company": "Porta Hnos. S.A.",
         "role": "Analista de Sistemas IT",
+        "from_to": "Feb. 2025 - Jul. 2025",
+        "mode": "Jornada completa / Hibrido",
+        "location": "Cordoba, Argentina",
+        "summary": "Analisis funcional, ERP corporativo, Jira, Grafana y soporte a usuarios.",
         "period": "Febrero 2025 - Julio 2025 / Jornada completa / Hibrido",
         "description": (
             "Participe en el analisis funcional y mejora de sistemas internos "
@@ -82,8 +94,14 @@ EXPERIENCES = [
         ],
     },
     {
+        "id": "pasante-porta",
+        "badge": "PH",
         "company": "Porta Hnos. S.A.",
         "role": "Pasante de IT",
+        "from_to": "Abr. 2024 - Feb. 2025",
+        "mode": "Jornada parcial / Presencial",
+        "location": "Argentina",
+        "summary": "Soporte tecnico, Active Directory y sistemas corporativos en entornos productivos.",
         "period": "Abril 2024 - Febrero 2025 / Jornada parcial / Presencial",
         "description": (
             "Brinde soporte tecnico a usuarios y colabore en la administracion "
@@ -96,6 +114,29 @@ EXPERIENCES = [
             "Diagnostico y resolucion de incidencias reportadas por usuarios internos.",
             "Instalacion y configuracion de software y hardware en estaciones de trabajo.",
             "Asistencia tecnica en entornos de oficina y produccion.",
+        ],
+    },
+    {
+        "id": "datos-orange",
+        "badge": "OR",
+        "company": "Orange",
+        "role": "Analista de datos",
+        "from_to": "Mar. 2021 - May. 2022",
+        "mode": "Jornada parcial / Remoto",
+        "location": "Cordoba y alrededores, Argentina",
+        "summary": "Gestion, normalizacion y control de calidad de datos tecnicos de infraestructura.",
+        "period": "Marzo 2021 - Mayo 2022 / Jornada parcial / Remoto",
+        "description": (
+            "Trabaje con informacion de infraestructura electrica y telefonica, "
+            "actualizando datos tecnicos, localizaciones y estructuras heterogeneas "
+            "para mantener trazabilidad y calidad de informacion."
+        ),
+        "items": [
+            "Gestion y actualizacion de archivos Excel con informacion de infraestructura electrica y telefonica.",
+            "Actualizacion de localizaciones ante cambios de postes, cableado o puntos de control.",
+            "Carga, normalizacion y validacion de datos tecnicos como tipo de poste, color, estado e imagenes asociadas.",
+            "Control de calidad de datos y seguimiento de modificaciones para mantener trazabilidad.",
+            "Trabajo con planillas avanzadas y estructuras de datos heterogeneas.",
         ],
     },
 ]
