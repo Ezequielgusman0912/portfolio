@@ -111,6 +111,7 @@ nav a.active::after {
 }
 
 .section,
+.profile-card,
 .hero-panel,
 .tech-card,
 .company-card,
@@ -124,6 +125,7 @@ nav a.active::after {
   animation: rise-in 620ms ease both;
 }
 
+.profile-card,
 .hero-panel {
   animation-delay: 120ms;
 }
@@ -253,6 +255,49 @@ h3 {
   width: 20px;
   height: 20px;
   fill: var(--accent);
+}
+
+.hero-aside {
+  display: grid;
+  gap: 18px;
+}
+
+.profile-card {
+  display: grid;
+  justify-items: center;
+  gap: 18px;
+  margin: 0;
+  padding: 24px;
+  border: 1px solid rgba(32, 224, 194, 0.34);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(32, 224, 194, 0.18), transparent 42%),
+    linear-gradient(180deg, rgba(17, 31, 36, 0.96), rgba(10, 19, 22, 0.96));
+  box-shadow: var(--shadow);
+}
+
+.profile-card img {
+  width: min(250px, 70vw);
+  aspect-ratio: 1;
+  border: 2px solid rgba(32, 224, 194, 0.56);
+  border-radius: 50%;
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.34);
+  object-fit: cover;
+}
+
+.profile-card figcaption {
+  display: grid;
+  gap: 2px;
+  text-align: center;
+}
+
+.profile-card strong {
+  font-size: 1.1rem;
+}
+
+.profile-card span {
+  color: var(--muted);
+  font-weight: 700;
 }
 
 .hero-panel {
@@ -742,6 +787,7 @@ ul {
   }
 
   .tech-card,
+  .profile-card,
   .company-card,
   .experience-card,
   .timeline-item,
@@ -750,6 +796,10 @@ ul {
   .compact-grid article,
   .hero-panel {
     padding: 20px;
+  }
+
+  .profile-card img {
+    width: min(220px, 62vw);
   }
 }
 

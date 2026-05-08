@@ -13,10 +13,19 @@
         <a class="button ghost" href="{% static 'portfolio/files/cv-ezequiel-gusman.pdf' %}" target="_blank" rel="noreferrer">CV</a>
       </div>
     </div>
-    <aside class="hero-panel" aria-label="Especialidades">
-      {% for item in highlights %}
-        <span>{{ item }}</span>
-      {% endfor %}
+    <aside class="hero-aside" aria-label="Presentacion y especialidades">
+      <figure class="profile-card">
+        <img src="{% static 'portfolio/img/ezequiel-gusman.jpeg' %}" alt="Foto de Ezequiel Gusman">
+        <figcaption>
+          <strong>{{ profile.name }}</strong>
+          <span>Backend Developer</span>
+        </figcaption>
+      </figure>
+      <div class="hero-panel" aria-label="Especialidades">
+        {% for item in highlights %}
+          <span>{{ item }}</span>
+        {% endfor %}
+      </div>
     </aside>
   </section>
 
