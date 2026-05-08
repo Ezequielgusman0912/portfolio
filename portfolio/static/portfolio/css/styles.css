@@ -323,7 +323,7 @@ h3 {
 
 .tech-strip {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 18px;
   padding-top: 0;
 }
@@ -393,6 +393,10 @@ h3 {
 
 .tech-icon.mysql {
   color: #7aa2ff;
+}
+
+.tech-icon.azure {
+  color: #38bdf8;
 }
 
 .split {

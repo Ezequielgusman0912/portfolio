@@ -40,6 +40,11 @@ TECH_BADGES = [
         "label": "Datos relacionales",
         "icon": "mysql",
     },
+    {
+        "name": "Azure",
+        "label": "App Service, DevOps y cloud",
+        "icon": "azure",
+    },
 ]
 
 EXPERIENCES = [
