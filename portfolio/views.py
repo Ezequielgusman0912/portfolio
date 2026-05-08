@@ -42,7 +42,7 @@ TECH_BADGES = [
     },
     {
         "name": "Azure",
-        "label": "App Service, DevOps y cloud",
+        "label": "integraciones cloud",
         "icon": "azure",
     },
 ]
