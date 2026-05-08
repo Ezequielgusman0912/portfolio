@@ -188,14 +188,49 @@ CERTIFICATIONS = [
 
 SYSTEMS = [
     {
-        "name": "Portal de proveedores",
-        "problem": "Necesidad de centralizar interacciones y consultas de proveedores en un entorno controlado.",
-        "solution": "Backend Django para gestionar informacion, permisos y flujos de consulta asociados al portal.",
-        "role": "Desarrollo backend, mantenimiento de servicios, integracion con datos internos y despliegue.",
-        "tags": ["Python", "Django", "Azure DevOps", "MySQL"],
+        "name": "CapHum - objetivos anuales",
+        "problem": "La gestion y carga de objetivos anuales dependia de herramientas externas y procesos poco centralizados.",
+        "solution": "Sistema propio para cargar, consultar y monitorear objetivos anuales, reduciendo dependencia de terceros.",
+        "role": "Desarrollo backend, modelado de datos, mantenimiento de servicios y soporte a usuarios internos.",
+        "tags": ["Python", "Django", "MySQL", "Azure DevOps"],
     },
     {
-        "name": "Sistema WMS e integraciones logisticas",
+        "name": "HyS - gestion automatizada",
+        "problem": "Procesos de higiene y seguridad se gestionaban con planillas Excel, dificultando trazabilidad y seguimiento.",
+        "solution": "Digitalizacion y automatizacion de registros, consultas y flujos internos para reemplazar planillas manuales.",
+        "role": "Desarrollo backend, automatizacion de procesos, soporte funcional y mejora continua.",
+        "tags": ["Python", "Django", "MySQL", "Automatizacion"],
+    },
+    {
+        "name": "AZ Consuman",
+        "problem": "Necesidad de integrar procesos internos con servicios cloud y ejecuciones desacopladas.",
+        "solution": "Servicios apoyados en Azure Functions para automatizar tareas e integraciones de backend.",
+        "role": "Integracion backend, despliegue cloud, mantenimiento y seguimiento operativo.",
+        "tags": ["Azure Functions", "Python", "Cloud", "Integraciones"],
+    },
+    {
+        "name": "Vinagre",
+        "problem": "Procesos productivos con necesidad de seguimiento y gestion interna mas ordenada.",
+        "solution": "Sistema backend para centralizar datos operativos y facilitar consultas de usuarios internos.",
+        "role": "Desarrollo y mantenimiento backend, consultas de datos y soporte funcional.",
+        "tags": ["Python", "Django", "MySQL", "Produccion"],
+    },
+    {
+        "name": "Intelmek / Panol",
+        "problem": "Sistemas para terceros con procesos apoyados en planillas y controles manuales.",
+        "solution": "Digitalizacion de flujos operativos, reduciendo uso de Excel y centralizando informacion en servicios backend.",
+        "role": "Desarrollo backend, integraciones, soporte tecnico y mejora de procesos existentes.",
+        "tags": ["Python", "Django", "APIs", "Terceros"],
+    },
+    {
+        "name": "Sistema de mulitas",
+        "problem": "Seguimiento operativo distribuido en archivos Excel y registros poco integrados.",
+        "solution": "Automatizacion de consultas y gestion interna para eliminar planillas dispersas y mejorar trazabilidad.",
+        "role": "Analisis funcional, desarrollo backend y acompanamiento a usuarios en la adopcion del sistema.",
+        "tags": ["Django", "SQL", "Automatizacion", "Operaciones"],
+    },
+    {
+        "name": "WMS e integraciones logisticas",
         "problem": "Procesos logisticos con multiples reglas, datos maestros e integraciones operativas.",
         "solution": "Servicios backend para organizar reglas, maestros, servicios externos y operaciones del WMS.",
         "role": "Analisis tecnico, soporte funcional, consultas de datos y desarrollo de endpoints internos.",
@@ -207,13 +242,6 @@ SYSTEMS = [
         "solution": "Servidor WebSocket para comunicacion bidireccional con dispositivos Raspberry Pi y procesos industriales.",
         "role": "Implementacion backend, manejo de eventos, integracion con hardware y observabilidad.",
         "tags": ["Python", "Django", "WebSockets", "Raspberry Pi"],
-    },
-    {
-        "name": "Sistemas de laboratorio y produccion",
-        "problem": "Areas operativas con necesidad de digitalizar consultas, registros y seguimiento interno.",
-        "solution": "Backends Django para administrar informacion operativa y disponibilizar datos a usuarios internos.",
-        "role": "Desarrollo, mantenimiento, soporte a usuarios y mejora continua de funcionalidades.",
-        "tags": ["Python", "Django", "MySQL", "Grafana"],
     },
 ]
 
