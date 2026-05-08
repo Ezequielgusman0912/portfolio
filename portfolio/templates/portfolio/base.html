@@ -40,7 +40,7 @@
     <a class="brand" href="{% url 'portfolio:home' %}">{{ profile.name }}</a>
     <nav aria-label="Principal">
       <a class="{% if active == 'experience' %}active{% endif %}" href="{% url 'portfolio:experience' %}">Experiencia</a>
-      <a class="{% if active == 'projects' %}active{% endif %}" href="{% url 'portfolio:projects' %}">Proyectos</a>
+      <a class="{% if active == 'projects' %}active{% endif %}" href="{% url 'portfolio:projects' %}">Sistemas</a>
       <a class="{% if active == 'stack' %}active{% endif %}" href="{% url 'portfolio:stack' %}">Stack</a>
       <a class="{% if active == 'contact' %}active{% endif %}" href="{% url 'portfolio:contact' %}">Contacto</a>
     </nav>

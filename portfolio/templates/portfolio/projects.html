@@ -1,22 +1,37 @@
 {% extends "portfolio/base.html" %}
 
-{% block title %}Proyectos | {{ profile.name }}{% endblock %}
+{% block title %}Sistemas | {{ profile.name }}{% endblock %}
 
 {% block content %}
   <section class="section page-heading">
-    <p class="eyebrow">Casos destacados</p>
-    <h1>Proyectos y focos tecnicos</h1>
-    <p class="lead">Una muestra de areas donde combino backend, integraciones, cloud y observabilidad.</p>
+    <p class="eyebrow">Porta Hnos. S.A.</p>
+    <h1>Sistemas desarrollados</h1>
+    <p class="lead">Casos reales de backend, integraciones, datos y observabilidad implementados en entornos productivos.</p>
+  </section>
+
+  <section class="section confidentiality-note">
+    <p>Por razones de confidencialidad, los sistemas desarrollados en Porta Hnos. S.A. no cuentan con repositorios publicos. Las descripciones reflejan funcionalidades reales implementadas en entornos productivos.</p>
   </section>
 
   <section class="section">
-    <div class="project-grid">
-      {% for project in projects %}
-        <article class="project-card">
-          <h2>{{ project.name }}</h2>
-          <p>{{ project.description }}</p>
+    <div class="project-grid systems-grid">
+      {% for system in systems %}
+        <article class="project-card system-card">
+          <h2>{{ system.name }}</h2>
+          <div class="system-field">
+            <span>Problema</span>
+            <p>{{ system.problem }}</p>
+          </div>
+          <div class="system-field">
+            <span>Solucion</span>
+            <p>{{ system.solution }}</p>
+          </div>
+          <div class="system-field">
+            <span>Mi rol</span>
+            <p>{{ system.role }}</p>
+          </div>
           <div class="tags">
-            {% for tag in project.tags %}
+            {% for tag in system.tags %}
               <span>{{ tag }}</span>
             {% endfor %}
           </div>

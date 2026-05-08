@@ -186,30 +186,34 @@ CERTIFICATIONS = [
     "Scrum y Metodologias Agiles - EducacionIT",
 ]
 
-PROJECTS = [
+SYSTEMS = [
     {
-        "name": "Monitoreo IoT en tiempo real",
-        "description": (
-            "Integracion backend con dispositivos Raspberry Pi mediante WebSockets "
-            "para seguimiento, monitoreo y control de hardware en tiempo real."
-        ),
-        "tags": ["Python", "Django", "WebSockets", "IoT"],
+        "name": "Portal de proveedores",
+        "problem": "Necesidad de centralizar interacciones y consultas de proveedores en un entorno controlado.",
+        "solution": "Backend Django para gestionar informacion, permisos y flujos de consulta asociados al portal.",
+        "role": "Desarrollo backend, mantenimiento de servicios, integracion con datos internos y despliegue.",
+        "tags": ["Python", "Django", "Azure DevOps", "MySQL"],
     },
     {
-        "name": "Servicios cloud internos",
-        "description": (
-            "Microservicios y despliegues en Azure App Service con autenticacion "
-            "MSAL, persistencia MySQL e integracion con plataformas de terceros."
-        ),
-        "tags": ["Azure", "MSAL", "MySQL", "Django"],
+        "name": "Sistema WMS e integraciones logisticas",
+        "problem": "Procesos logisticos con multiples reglas, datos maestros e integraciones operativas.",
+        "solution": "Servicios backend para organizar reglas, maestros, servicios externos y operaciones del WMS.",
+        "role": "Analisis tecnico, soporte funcional, consultas de datos y desarrollo de endpoints internos.",
+        "tags": ["Django REST Framework", "SQL", "ERP", "WMS"],
     },
     {
-        "name": "Observabilidad operativa",
-        "description": (
-            "Tableros de Grafana para visualizar metricas criticas, estado de "
-            "servicios, integraciones y salud del sistema."
-        ),
-        "tags": ["Grafana", "Metricas", "DevOps"],
+        "name": "Monitoreo IoT con WebSockets",
+        "problem": "Necesidad de monitorear y controlar hardware distribuido en tiempo real.",
+        "solution": "Servidor WebSocket para comunicacion bidireccional con dispositivos Raspberry Pi y procesos industriales.",
+        "role": "Implementacion backend, manejo de eventos, integracion con hardware y observabilidad.",
+        "tags": ["Python", "Django", "WebSockets", "Raspberry Pi"],
+    },
+    {
+        "name": "Sistemas de laboratorio y produccion",
+        "problem": "Areas operativas con necesidad de digitalizar consultas, registros y seguimiento interno.",
+        "solution": "Backends Django para administrar informacion operativa y disponibilizar datos a usuarios internos.",
+        "role": "Desarrollo, mantenimiento, soporte a usuarios y mejora continua de funcionalidades.",
+        "tags": ["Python", "Django", "MySQL", "Grafana"],
     },
 ]
 
@@ -255,7 +259,7 @@ def experience_detail(request, slug):
 
 def projects(request):
     context = base_context("projects") | {
-        "projects": PROJECTS,
+        "systems": SYSTEMS,
     }
     return render(request, "portfolio/projects.html", context)
 
